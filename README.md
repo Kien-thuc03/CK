@@ -1,3 +1,12 @@
+// tao mot ban con books authors voi 2 thuoc tinh la ISBN va author
+    @ElementCollection
+    @JoinTable(name = "books_authors", joinColumns = @JoinColumn(name = "ISBN"))
+    @Column(name = "author", nullable = false)
+    private Set<String> authors;
+
+//dat o lop cha de tao moi quan he 1 1 voi lop con trong csdl
+    @Inheritance(strategy = InheritanceType.JOINED)
+
 import entity.Food;
 import entity.Item;
 
